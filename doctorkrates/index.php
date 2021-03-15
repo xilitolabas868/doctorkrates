@@ -42,13 +42,8 @@ $result = mysqli_query($conn, $sql);
         <button onclick="myFunction()" class="dropbtn">Dropdown</button>
         <div id="ccDropdown" class="dropdown-content">
           <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="filterFunction()">
-          Aasefasef
-          <a href="#base">Base</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
-          <a href="#custom">Custom</a>
-          <a href="#support">Support</a>
-          <a href="#tools">Tools</a>
+          <a href="">Base</a>
+
       </div>
     </div>
   </body>
