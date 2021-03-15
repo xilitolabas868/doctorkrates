@@ -42,7 +42,7 @@ $result = mysqli_query($conn, $sql);
         <button onclick="myFunction()" class="dropbtn">Dropdown</button>
         <div id="ccDropdown" class="dropdown-content">
           <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="filterFunction()">
-          <a href="">Base</a>
+          <a href="base">Base</a>
 
       </div>
     </div>
