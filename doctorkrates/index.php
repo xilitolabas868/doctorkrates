@@ -43,7 +43,6 @@ $result = mysqli_query($conn, $sql);
         <div id="ccDropdown" class="dropdown-content">
           <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="filterFunction()">
           <a href="#Base">Base</a>
-
       </div>
     </div>
   </body>
