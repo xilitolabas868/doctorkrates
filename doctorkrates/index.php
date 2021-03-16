@@ -1,8 +1,8 @@
 <?php
 $conn = mysqli_connect(
-  'localhost',
-  'root',
-  '111111',
+  '3.142.77.137',
+  'xilitolabs868',
+  'q1046q',
   'doctorkrates');
 
 $sql = "SELECT * FROM symptom";
