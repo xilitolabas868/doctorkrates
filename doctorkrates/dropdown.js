@@ -1,10 +1,10 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function dropdownFunction() {
   document.getElementById("ccDropdown").classList.toggle("show");
 }
 
-function filterFunction() {
+function droptownFilterFunction() {
   var input, filter, ul, li, a, i;
   input = document.getElementById("ccInput");
   filter = input.value.toUpperCase();
