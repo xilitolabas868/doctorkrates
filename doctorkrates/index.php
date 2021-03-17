@@ -20,15 +20,8 @@ $result = mysqli_query($conn, $sql);
     <title>Doctorkrates</title>
   </head>
   <body>
-    <ul>
-      <?php
-        while($row = mysqli_fetch_array($result)) {
-          $escaped_cc = htmlspecialchars($row['name']);
-          echo '<a href = ./index.php?id='.$escaped_cc.'>'.$escaped_cc.'</a><br>';
-        }
-      ?>
-      <a href="./ddx.php"><input type="button" name="next_page" value="Select!"></a>
-    </ul>
+
+
     <h2>
       <?php
       if(isset($_GET['id'])) {
@@ -42,8 +35,14 @@ $result = mysqli_query($conn, $sql);
         <button onclick="dropdownFunction()" class="dropbtn">Dropdown</button>
         <div id="ccDropdown" class="dropdown-content">
           <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="dropdownFilterFunction()">
-          <a href="#Base">Base</a>
+          <?php
+            while($row = mysqli_fetch_array($result)) {
+              $escaped_cc = htmlspecialchars($row['name']);
+              echo '<a href = ./index.php?id='.$escaped_cc.'>'.$escaped_cc.'</a>';
+            }
+          ?>
       </div>
     </div>
+    <a href="./ddx.php"><input type="button" name="next_page" value="Select!"></a>
   </body>
 </html>
