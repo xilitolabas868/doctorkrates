@@ -1,10 +1,6 @@
 <?php
 $conn = mysqli_connect(
-<<<<<<< HEAD
   '3.19.228.198',
-=======
-  '3.19.228.198/',
->>>>>>> fde77fe3baccddfa527d00f8d48fa45bdb511f6a
   'xilitolabs868',
   '111111',
   'doctorkrates');
