@@ -1,8 +1,8 @@
 <?php
 $conn = mysqli_connect(
-  '3.142.77.137',
+  '3.19.228.198/',
   'xilitolabs868',
-  'q1046q',
+  '111111',
   'doctorkrates');
 
 $sql = "SELECT * FROM symptom";
@@ -39,9 +39,9 @@ $result = mysqli_query($conn, $sql);
       ?>
     </h2>
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <button onclick="dropdownFunction()" class="dropbtn">Dropdown</button>
         <div id="ccDropdown" class="dropdown-content">
-          <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="filterFunction()">
+          <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="dropdownFilterFunction()">
           <a href="#Base">Base</a>
       </div>
     </div>
