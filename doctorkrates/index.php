@@ -3,9 +3,9 @@ $conn = mysqli_connect(
   '3.19.228.198',
   'xilitolabs868',
   '111111',
-  'doctorkrates');
+  'doctorkrates_proto');
 
-$sql = "SELECT * FROM symptom";
+$sql = "SELECT * FROM symptom_proto";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -37,7 +37,7 @@ $result = mysqli_query($conn, $sql);
           <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="dropdownFilterFunction()">
           <?php
             while($row = mysqli_fetch_array($result)) {
-              $escaped_cc = htmlspecialchars($row['name']);
+              $escaped_cc = htmlspecialchars($row['symptom_name']);
               echo '<a href = ./index.php?id='.$escaped_cc.'>'.$escaped_cc.'</a>';
             }
           ?>
