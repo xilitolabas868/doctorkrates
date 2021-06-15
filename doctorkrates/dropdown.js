@@ -1,14 +1,14 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function dropdownFunction() {
-  document.getElementById("ccDropdown").classList.toggle("show");
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
-function droptownFilterFunction() {
+function filterFunction() {
   var input, filter, ul, li, a, i;
-  input = document.getElementById("ccInput");
+  input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  div = document.getElementById("ccDropdown");
+  div = document.getElementById("myDropdown");
   a = div.getElementsByTagName("a");
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;

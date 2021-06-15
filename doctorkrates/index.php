@@ -3,9 +3,9 @@ $conn = mysqli_connect(
   '3.19.228.198',
   'xilitolabs868',
   '111111',
-  'doctorkrates_proto');
+  'doctorkrates');
 
-$sql = "SELECT * FROM symptom_proto";
+$sql = "SELECT * FROM symptom";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -15,13 +15,9 @@ $result = mysqli_query($conn, $sql);
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/dropdown.css">
     <script src="dropdown.js"></script>
-
-    </script>
     <title>Doctorkrates</title>
   </head>
   <body>
-
-
     <h2>
       <?php
       if(isset($_GET['id'])) {
@@ -32,17 +28,27 @@ $result = mysqli_query($conn, $sql);
       ?>
     </h2>
       <div class="dropdown">
-        <button onclick="dropdownFunction()" class="dropbtn">Dropdown</button>
-        <div id="ccDropdown" class="dropdown-content">
-          <input type="text" placeholder="Seach your main symptom.." id="ccInput" onkeyup="dropdownFilterFunction()">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <?php
             while($row = mysqli_fetch_array($result)) {
-              $escaped_cc = htmlspecialchars($row['symptom_name']);
+              $escaped_cc = htmlspecialchars($row['name_ENG']);
               echo '<a href = ./index.php?id='.$escaped_cc.'>'.$escaped_cc.'</a>';
             }
           ?>
+        </div>
       </div>
-    </div>
-    <a href="./ddx.php"><input type="button" name="next_page" value="Select!"></a>
+      <a href="./ddx.php"><input type="button" name="next_page" value="Select!"></a>
+
+    <script>
+      var myArray = ["stone", "paper", "scissors"]
+      function printnumbers() {
+        document.querySelector('#result').textContent = <button> + myArray.join(', ') + </button>;
+      }
+    </script>
+
+    <button onclick="printnumbers()">Print Numbers</button>
+    <div id="result"></div>
   </body>
 </html>
