@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $sql);
     <script>
       var myArray = ["stone", "paper", "scissors"]
       function printnumbers() {
-        document.querySelector('#result').textContent = <button> + myArray.join(', ') + </button>;
+        document.querySelector('#result').textContent = myArray.join(', ');
       }
     </script>
 
